@@ -1,0 +1,286 @@
+<!DOCTYPE HTML>
+<!--
+--- クエストの基本雛形 ---
+クエスト名:
+説明:
+発生条件:
+達成条件:
+場所(ディメンション):
+報酬:
+----------------------------------
+-->
+<html>
+<head>
+  <title>TUSB Create Form</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/>
+  <link rel="stylesheet" href="assets/css/main.css"/>
+  <noscript>
+    <link rel="stylesheet" href="assets/css/noscript.css"/>
+  </noscript>
+  <style>
+    img {
+      width: auto;
+      height: auto;
+      max-width: 90%;
+      max-height: 90%;
+    }
+  </style>
+  <script type="application/javascript">
+    function check() {
+      if (window.confirm('送信してよろしいですか？')) { // 確認ダイアログを表示
+        return true; // 「OK」時は送信を実行
+      }
+      else { // 「キャンセル」時の処理
+        window.alert('キャンセルされました'); // 警告ダイアログを表示
+        return false; // 送信を中止
+      }
+    }
+  </script>
+</head>
+<body class="is-preload">
+
+<!-- Wrapper -->
+<div id="wrapper">
+
+  <!-- Header -->
+  <header id="header">
+    <div class="logo">
+      <!--<span class="icon fa-diamond"></span>-->
+      <span class="icon"> <img src="images/1.png"></span>
+    </div>
+    <div class="content">
+      <div class="inner">
+        <h1>TUSB Form</h1>
+        <p>ここからTheUnusualSkyBlock v13 の追加レシピ案 追加クエスト案 を送信することができます。
+          <br>ここでの内容は <a href="https://skyblock.jp/dl/discord">TUSB Discord</a> に送信されます<br/>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#quest">クエスト案</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <div id="main">
+
+
+    <!-- About -->
+    <article id="about">
+      <h2 class="major">About</h2>
+      <span class="image main"><img src="images/pic03.jpg" alt=""/></span>
+      <p>ほげすほげ</p>
+    </article>
+
+    <!-- Quest -->
+    <article id="quest">
+      <h2 class="major">クエスト案</h2>
+
+      <section>
+        <form method="post" action="#" onSubmit="return check()">
+          <div class="fields">
+            <div class="field">
+              <label for="quest-name">クエスト名</label>
+              <input type="text" name="quest-name" id="quest-name" value=""
+                     placeholder="Quest Name (20文字程度)"/>
+            </div>
+            <div class="field">
+              <label for="quest-desc">クエスト説明</label>
+              <textarea name="quest-desc" id="quest-desc" placeholder="Quest Description (200文字以下)"
+                        rows="6"></textarea>
+            </div>
+            <div class="field half">
+              <label for="quest-trigger">クエスト発生条件</label>
+              <textarea name="quest-trigger" id="quest-trigger" placeholder="Quest Trigger (完結丁寧に)"
+                        rows="4"></textarea>
+            </div>
+            <div class="field half">
+              <label for="quest-cond">クエスト達成条件</label>
+              <textarea name="quest-cond" id="quest-cond" placeholder="Quest Condition (完結丁寧に)"
+                        rows="4"></textarea>
+            </div>
+            <div class="field">
+              <label for="quest-dimension">ディメンション</label>
+              <select name="quest-dimension" id="quest-dimension">
+                <option value="0" disabled="disabled"></option>
+                <option value="1"> - オーバワールド -</option>
+                <option value="10">通常世界</option>
+                <option value="11">初期チュートリアルエリア(命名未定)</option>
+                <option value="12">地下世界</option>
+                <option value="13">テーブルマウンテン</option>
+                <option value="14">クラウディア</option>
+                <option value="15">ガリバーランド</option>
+                <option value="16">トカルトコルデ</option>
+
+                <option value="0" disabled="disabled"></option>
+                <option value="100"> - ネザー -</option>
+                <option value="110">煉獄</option>
+                <option value="120">ネザーアスレ</option>
+                <option value="0" disabled="disabled"></option>
+
+                <option value="200"> - エンド -</option>
+                <option value="210">植物庭園</option>
+                <option value="220">エンド城</option>
+
+                <!--通常世界：0-->
+
+                <!--スキル設定場：10-->
+                <!--劇場：11-->
+                <!--地下世界：12-->
+                <!--テーブルマウンテン：13-->
+                <!--クラウディア：14-->
+                <!--ガリバーランド：15-->
+                <!--トカルトコルデ：16-->
+                <!--ネザーアスレ：20-->
+
+                <!--ネザー：100-->
+                <!--煉獄：110-->
+
+                <!--エンド：210-->
+              </select>
+            </div>
+            <!--<div class="field half">-->
+            <!--<input type="radio" id="demo-priority-low" name="demo-priority" checked>-->
+            <!--<label for="demo-priority-low">Low</label>-->
+            <!--</div>-->
+            <!--<div class="field half">-->
+            <!--<input type="radio" id="demo-priority-high" name="demo-priority">-->
+            <!--<label for="demo-priority-high">High</label>-->
+            <!--</div>-->
+            <!--<div class="field half">-->
+            <!--<input type="checkbox" id="demo-copy" name="demo-copy">-->
+            <!--<label for="demo-copy">Email me a copy</label>-->
+            <!--</div>-->
+            <!--<div class="field half">-->
+            <!--<input type="checkbox" id="demo-human" name="demo-human" checked>-->
+            <!--<label for="demo-human">Not a robot</label>-->
+            <!--</div>-->
+            <!--<div class="field">-->
+            <!--<label for="demo-message">Message</label>-->
+            <!--<textarea name="demo-message" id="demo-message" placeholder="Enter your message"-->
+            <!--rows="6"></textarea>-->
+            <!--</div>-->
+          </div>
+          <ul class="actions">
+            <li><input type="submit" value="送信" class="primary"/></li>
+            <li><input type="reset" value="Reset"/></li>
+          </ul>
+        </form>
+      </section>
+      <ul class="icons">
+        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+        <li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+        <li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>
+      </ul>
+    </article>
+
+
+    <!--&lt;!&ndash; Contact &ndash;&gt;-->
+    <!--<article id="contact">-->
+    <!--<h2 class="major">Contact</h2>-->
+    <!--<section>-->
+    <!--<h3 class="major">Buttons</h3>-->
+    <!--<ul class="actions">-->
+    <!--<li><a href="#" class="button primary">Primary</a></li>-->
+    <!--<li><a href="#" class="button">Default</a></li>-->
+    <!--</ul>-->
+    <!--<ul class="actions">-->
+    <!--<li><a href="#" class="button">Default</a></li>-->
+    <!--<li><a href="#" class="button small">Small</a></li>-->
+    <!--</ul>-->
+    <!--<ul class="actions">-->
+    <!--<li><a href="#" class="button primary icon fa-download">Icon</a></li>-->
+    <!--<li><a href="#" class="button icon fa-download">Icon</a></li>-->
+    <!--</ul>-->
+    <!--<ul class="actions">-->
+    <!--<li><span class="button primary disabled">Disabled</span></li>-->
+    <!--<li><span class="button disabled">Disabled</span></li>-->
+    <!--</ul>-->
+    <!--</section>-->
+
+    <!--<section>-->
+    <!--<h3 class="major">Form</h3>-->
+    <!--<form method="post" action="#" onSubmit="return check()">-->
+    <!--<div class="fields">-->
+    <!--<div class="field half">-->
+    <!--<label for="demo-name">Name</label>-->
+    <!--<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe"/>-->
+    <!--</div>-->
+    <!--<div class="field half">-->
+    <!--<label for="demo-email">Email</label>-->
+    <!--<input type="email" name="demo-email" id="demo-email" value=""-->
+    <!--placeholder="jane@untitled.tld"/>-->
+    <!--</div>-->
+    <!--<div class="field">-->
+    <!--<label for="demo-category">Category</label>-->
+    <!--<select name="demo-category" id="demo-category">-->
+    <!--<option value="">-</option>-->
+    <!--<option value="1">Manufacturing</option>-->
+    <!--<option value="1">Shipping</option>-->
+    <!--<option value="1">Administration</option>-->
+    <!--<option value="1">Human Resources</option>-->
+    <!--</select>-->
+    <!--</div>-->
+    <!--<div class="field half">-->
+    <!--<input type="radio" id="demo-priority-low" name="demo-priority" checked>-->
+    <!--<label for="demo-priority-low">Low</label>-->
+    <!--</div>-->
+    <!--<div class="field half">-->
+    <!--<input type="radio" id="demo-priority-high" name="demo-priority">-->
+    <!--<label for="demo-priority-high">High</label>-->
+    <!--</div>-->
+    <!--<div class="field half">-->
+    <!--<input type="checkbox" id="demo-copy" name="demo-copy">-->
+    <!--<label for="demo-copy">Email me a copy</label>-->
+    <!--</div>-->
+    <!--<div class="field half">-->
+    <!--<input type="checkbox" id="demo-human" name="demo-human" checked>-->
+    <!--<label for="demo-human">Not a robot</label>-->
+    <!--</div>-->
+    <!--<div class="field">-->
+    <!--<label for="demo-message">Message</label>-->
+    <!--<textarea name="demo-message" id="demo-message" placeholder="Enter your message"-->
+    <!--rows="6"></textarea>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--<ul class="actions">-->
+    <!--<li><input type="submit" value="送信" class="primary"/></li>-->
+    <!--<li><input type="reset" value="Reset"/></li>-->
+    <!--</ul>-->
+    <!--</form>-->
+    <!--</section>-->
+    <!--<ul class="icons">-->
+    <!--<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>-->
+    <!--<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>-->
+    <!--<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>-->
+    <!--<li><a href="#" class="icon fa-github"><span class="label">GitHub</span></a></li>-->
+    <!--</ul>-->
+    <!--</article>-->
+
+
+  </div>
+
+  <!-- Footer -->
+  <footer id="footer">
+    <p class="copyright">&copy; TUSB: <a href="https://skyblock.jp">TUSB</a>.</p>
+  </footer>
+
+</div>
+
+<!-- BG -->
+<div id="bg"></div>
+
+<!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
